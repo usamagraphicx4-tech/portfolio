@@ -1346,3 +1346,56 @@ img {
         font-size: 10px;
     }
 }
+
+/* FINAL MOBILE WIDTH FIX */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    header,
+    nav,
+    .hero-section,
+    .hero-content,
+    .portfolio-section,
+    .coverflow-wrapper,
+    .about-section,
+    .about-container,
+    .services,
+    .services-grid,
+    .contact-section,
+    .contact-container,
+    footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        gap: 20px !important;
+    }
+
+    .contact-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
