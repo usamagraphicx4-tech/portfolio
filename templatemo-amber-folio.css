@@ -1399,3 +1399,119 @@ img {
         grid-template-columns: 1fr !important;
     }
 }
+
+
+/* ===== FINAL MOBILE + FOOTER FIX ===== */
+
+footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 35px 20px !important;
+    overflow: hidden !important;
+}
+
+.footer-content {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Contact cards */
+    .contact-info {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        gap: 20px !important;
+    }
+
+    .contact-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Footer */
+    footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding: 30px 15px !important;
+    }
+
+    .footer-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .social-links {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .footer-text {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+        word-break: break-word !important;
+    }
+
+    /* Reduce heavy effects on phone */
+    .coverflow-item::after {
+        display: none !important;
+    }
+
+    .hero-section::before,
+    .hero-section::after,
+    .floating-accent {
+        animation: none !important;
+    }
+
+    .coverflow-item {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2.2rem !important;
+    }
+
+    .usa {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 16px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .contact-section {
+        padding: 70px 15px !important;
+    }
+
+    .services {
+        padding: 70px 15px !important;
+    }
+
+    .about-section {
+        padding: 70px 15px !important;
+    }
+
+    footer {
+        padding: 25px 12px !important;
+    }
+}
