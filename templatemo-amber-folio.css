@@ -1175,3 +1175,174 @@ footer {
     color: #ffb52e !important;
     letter-spacing: 1.5px !important;
 }
+
+/* ===== FINAL MOBILE RESPONSIVE FIX ===== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    /* Header */
+    nav {
+        width: 100%;
+        padding: 0 18px;
+    }
+
+    /* Hero */
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 18px;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .usa {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.15;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        line-height: 1.5;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    /* Portfolio */
+    .portfolio-section {
+        width: 100%;
+        overflow: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .coverflow-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .coverflow-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* About */
+    .about-section {
+        padding-left: 18px;
+        padding-right: 18px;
+        overflow: hidden;
+    }
+
+    .about-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .about-content p {
+        font-size: 17px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    /* Services */
+    .services {
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+        overflow: hidden;
+    }
+
+    .services-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* CONTACT - IMPORTANT FIX */
+    .contact-section {
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+        overflow: hidden;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-info {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        gap: 20px !important;
+    }
+
+    .contact-item {
+        width: 100%;
+        min-width: 0;
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .usa {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .cta-button {
+        padding: 13px 25px;
+        font-size: 12px;
+    }
+
+    .stats {
+        gap: 5px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+}
