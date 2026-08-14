@@ -663,7 +663,7 @@ nav {
 	line-height: 1.8;
 	margin-bottom: 20px;
 	font-size: 20px;
-	font-colorl: blue;
+	font-colorl : blue;
 }
 
 .stats {
@@ -1514,4 +1514,497 @@ footer {
     footer {
         padding: 25px 12px !important;
     }
+}
+
+/* =========================================
+   PROJECT LINK
+========================================= */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 14px;
+    padding: 9px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PROJECT CARD ANIMATION
+========================================= */
+
+.coverflow-item {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.coverflow-item:hover {
+    box-shadow:
+        0 30px 60px -15px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================
+   MOBILE PERFORMANCE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .portfolio-section {
+        min-height: auto;
+        padding: 70px 0 100px;
+    }
+
+    .section-header {
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 0 15px;
+    }
+
+    .coverflow-wrapper {
+        padding: 20px 0 70px;
+        overflow: hidden;
+    }
+
+    .coverflow-container {
+        width: 100%;
+        max-width: 100%;
+        height: 390px;
+
+        perspective: 800px;
+    }
+
+    .coverflow-item {
+        width: 220px;
+        height: 310px;
+
+        border-radius: 12px;
+
+        transition:
+            transform 0.45s ease,
+            opacity 0.45s ease;
+    }
+
+    .portfolio-overlay {
+        padding: 20px;
+
+        /* Mobile par information visible */
+        transform: translateY(0);
+
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.96) 0%,
+            rgba(0, 0, 0, 0.80) 55%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+    }
+
+    .portfolio-category {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .portfolio-title {
+        font-size: 18px;
+    }
+
+    .portfolio-description {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .project-link {
+        margin-top: 8px;
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .coverflow-controls {
+        bottom: 10px;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .indicators {
+        bottom: -35px;
+        gap: 6px;
+    }
+
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .indicator.active {
+        width: 22px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .portfolio-section {
+        padding-top: 55px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .coverflow-container {
+        height: 360px;
+        perspective: 650px;
+    }
+
+    .coverflow-item {
+        width: 195px;
+        height: 275px;
+    }
+
+    .portfolio-overlay {
+        padding: 16px;
+    }
+
+    .portfolio-title {
+        font-size: 16px;
+    }
+
+    .portfolio-description {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .coverflow-item,
+    .portfolio-image,
+    .portfolio-overlay,
+    .project-link,
+    .control-btn {
+        transition: none !important;
+    }
+}
+/* =========================================
+   PORTFOLIO PERFORMANCE + ANIMATION
+   ========================================= */
+
+.coverflow-item {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.portfolio-image {
+    display: block;
+    backface-visibility: hidden;
+}
+
+
+/* Portfolio section entrance */
+
+.portfolio-section .section-header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.portfolio-section .section-header.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Full Portfolio Button */
+
+.portfolio-more {
+    text-align: center;
+    margin-top: 80px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: portfolioMoreIn 0.8s ease 0.3s forwards;
+}
+
+.portfolio-more p {
+    color: var(--text-gray);
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+
+.portfolio-drive-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 30px;
+
+    color: var(--accent-color);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.portfolio-drive-btn span {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-drive-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-dark);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.portfolio-drive-btn:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+@keyframes portfolioMoreIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .portfolio-section {
+        min-height: auto;
+        padding: 75px 0 100px;
+        overflow: hidden;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+        padding: 0 18px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .coverflow-wrapper {
+        padding: 20px 0 70px;
+        overflow: hidden;
+    }
+
+    .coverflow-container {
+        width: 100%;
+        max-width: 100%;
+        height: 360px;
+        perspective: 900px;
+    }
+
+    .coverflow-item {
+        width: 210px;
+        height: 290px;
+
+        border-radius: 10px;
+
+        box-shadow:
+            0 15px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Keep mobile animation smooth */
+
+    .portfolio-image {
+        transition: transform 0.45s ease;
+    }
+
+    .portfolio-overlay {
+        padding: 18px;
+    }
+
+    .portfolio-title {
+        font-size: 17px;
+    }
+
+    .portfolio-description {
+        font-size: 11px;
+    }
+
+    .portfolio-category {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .coverflow-controls {
+        bottom: 0;
+        gap: 10px;
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .indicators {
+        bottom: -38px;
+        gap: 6px;
+    }
+
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .indicator.active {
+        width: 22px;
+    }
+
+    .portfolio-more {
+        margin-top: 75px;
+        padding: 0 20px;
+    }
+
+}
+
+
+/* Small phones */
+
+@media (max-width: 480px) {
+
+    .portfolio-section {
+        padding-top: 60px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .coverflow-container {
+        height: 330px;
+    }
+
+    .coverflow-item {
+        width: 185px;
+        height: 255px;
+    }
+
+    .portfolio-overlay {
+        padding: 15px;
+    }
+
+    .portfolio-title {
+        font-size: 15px;
+    }
+
+    .portfolio-description {
+        font-size: 10px;
+    }
+
+    .portfolio-drive-btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* Reduce animation for users who prefer less motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .coverflow-item,
+    .portfolio-image,
+    .portfolio-overlay,
+    .portfolio-drive-btn {
+        transition: none !important;
+        animation: none !important;
+    }
+
 }
